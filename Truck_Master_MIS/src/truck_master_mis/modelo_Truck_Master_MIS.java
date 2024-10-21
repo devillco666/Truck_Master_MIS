@@ -6,8 +6,8 @@ package truck_master_mis;
 
 /**
  *
- * @Ioan Sorin Muntean
+ * @author IOAN SORIN MUNTEAN
  */
-public class Controlador {
+public class modelo_Truck_Master_MIS {
     
 }
