@@ -1,18 +1,25 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change esta licencia
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java para editar esta plantilla
  */
 package truck_master_mis;
 
 /**
+ * Clase controlador para manejar la lógica de la aplicación.
  *
  * @Ioan Sorin Muntean
  */
-
 public class controlador_Truck_Master_MIS {
-    public void arrancarVentana(){
-     principal_Vista pv = new principal_Vista();
-       pv.setVisible(true);
+
+    /**
+     * Método para iniciar y mostrar la ventana principal.
+     * Crea una instancia de la clase principal_Vista y la muestra.
+     */
+    public void arrancarVentana() {
+        // Crea una instancia de la ventana principal de la aplicación
+        principal_Vista pv = new principal_Vista();
+        
+        // Hace visible la ventana principal
+        pv.setVisible(true);
     }
-    
 }

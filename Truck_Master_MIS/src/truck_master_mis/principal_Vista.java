@@ -4,6 +4,7 @@
  */
 package truck_master_mis;
 
+// Importación de librerías necesarias para manejar eventos
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.ComponentEvent;
@@ -18,21 +19,23 @@ import java.awt.event.WindowListener;
 public class principal_Vista extends javax.swing.JFrame {
 
     /**
-     * Creado nuevo frame principal 
+     * Constructor de la clase principal_Vista.
+     * Crea un nuevo frame principal de la aplicación.
      */
     public principal_Vista() {
-        initComponents();
-        
-        
+        initComponents(); // Inicializa los componentes gráficos
+
+        // Crea instancias de los manejadores de eventos
         manejaComponetes mComponentes = new manejaComponetes();
         manejadorDeVentana manejaVentanas = new manejadorDeVentana();
          
-         this.addComponentListener(mComponentes);
-         this.addWindowListener(manejaVentanas);
-          manejaClick mc = new manejaClick();
-           btnHola.addActionListener(mc);
-           
+        // Agrega los listeners a la ventana
+        this.addComponentListener(mComponentes); // Maneja eventos de componentes
+        this.addWindowListener(manejaVentanas); // Maneja eventos de la ventana
         
+        // Crea un manejador para el botón y le asigna el ActionListener
+        manejaClick mc = new manejaClick();
+        btnHola.addActionListener(mc); // Asocia el evento de clic al botón
     }
 
     /**
@@ -80,79 +83,76 @@ public class principal_Vista extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 
 }
-class manejaClick implements ActionListener{
-
+// Clase que maneja el evento de clic en el botón
+class manejaClick implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
-        
+        // Muestra el comando de acción del evento en la consola
         System.out.println(e.getActionCommand());
-        System.out.println("Se ha pulsado el buton");
+        System.out.println("Se ha pulsado el botón"); // Mensaje indicando que se ha presionado el botón
     }
-   
-    
-    
 }
-class manejaComponetes implements ComponentListener{
 
-        @Override
-        public void componentResized(ComponentEvent e) {
-            System.out.println("La ventana cambio de tamaño");
-        }
-
-        @Override
-        public void componentMoved(ComponentEvent e) {
-            System.out.println("La ventana se movio de sitio");
-        }
-
-        @Override
-        public void componentShown(ComponentEvent e) {
-            System.out.println("La controles aparecen");
-        }
-
-        @Override
-        public void componentHidden(ComponentEvent e) {
-            System.out.println("Los controles se ocultan");
-        }
-        
+// Clase que maneja eventos de componentes de la ventana
+class manejaComponetes implements ComponentListener {
+    @Override
+    public void componentResized(ComponentEvent e) {
+        System.out.println("La ventana cambió de tamaño"); // Mensaje al redimensionar la ventana
     }
- class manejadorDeVentana implements WindowListener{
 
-        @Override
-        public void windowOpened(WindowEvent e) {
-            System.out.println(e.getNewState());
-            System.out.println("Ventana abierta");
-        }
-
-        @Override
-        public void windowClosing(WindowEvent e) {
-            System.out.println(e.getNewState());
-            System.out.println("Ventana cerrandose");
-        }
-
-        @Override
-        public void windowClosed(WindowEvent e) {
-            System.out.println(e.getNewState());
-            System.out.println("Ventana cerrada");
-        }
-
-        @Override
-        public void windowIconified(WindowEvent e) {
-            System.out.println(e.getNewState());
-        }
-
-        @Override
-        public void windowDeiconified(WindowEvent e) {
-            System.out.println(e.getNewState());
-        }
-
-        @Override
-        public void windowActivated(WindowEvent e) {
-            System.out.println(e.getNewState());
-        }
-
-        @Override
-        public void windowDeactivated(WindowEvent e) {
-            System.out.println(e.getNewState());
-        }
-        
+    @Override
+    public void componentMoved(ComponentEvent e) {
+        System.out.println("La ventana se movió de sitio"); // Mensaje al mover la ventana
     }
+
+    @Override
+    public void componentShown(ComponentEvent e) {
+        System.out.println("Los controles aparecen"); // Mensaje cuando los controles se muestran
+    }
+
+    @Override
+    public void componentHidden(ComponentEvent e) {
+        System.out.println("Los controles se ocultan"); // Mensaje cuando los controles se ocultan
+    }
+}
+
+// Clase que maneja eventos del ciclo de vida de la ventana
+class manejadorDeVentana implements WindowListener {
+    @Override
+    public void windowOpened(WindowEvent e) {
+        System.out.println(e.getNewState());
+        System.out.println("Ventana abierta"); // Mensaje al abrir la ventana
+    }
+
+    @Override
+    public void windowClosing(WindowEvent e) {
+        System.out.println(e.getNewState());
+        System.out.println("Ventana cerrándose"); // Mensaje al cerrar la ventana
+    }
+
+    @Override
+    public void windowClosed(WindowEvent e) {
+        System.out.println(e.getNewState());
+        System.out.println("Ventana cerrada"); // Mensaje cuando la ventana ya está cerrada
+    }
+
+    @Override
+    public void windowIconified(WindowEvent e) {
+        System.out.println("Ventana minimizada"); // Mensaje al minimizar la ventana
+    }
+
+    @Override
+    public void windowDeiconified(WindowEvent e) {
+        System.out.println("Ventana maximizada"); // Mensaje al restaurar la ventana
+    }
+
+    @Override
+    public void windowActivated(WindowEvent e) {
+        System.out.println("Ventana activada"); // Mensaje cuando la ventana es activada
+    }
+
+    @Override
+    public void windowDeactivated(WindowEvent e) {
+        System.out.println("Ventana defocalizada"); // Mensaje cuando la ventana pierde el foco
+    }
+}
