@@ -33,9 +33,9 @@ public class principal_Vista extends javax.swing.JFrame {
         this.addComponentListener(mComponentes); // Maneja eventos de componentes
         this.addWindowListener(manejaVentanas); // Maneja eventos de la ventana
         
-        // Crea un manejador para el botón y le asigna el ActionListener
-        manejaClick mc = new manejaClick();
-        btnHola.addActionListener(mc); // Asocia el evento de clic al botón
+       // Crea un manejador para el botón y le asigna el ActionListener
+     //   manejaClick mc = new manejaClick();
+       
     }
 
     /**
@@ -47,28 +47,27 @@ public class principal_Vista extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btnHola = new javax.swing.JButton();
+        img_vista_TruckMaster_mis = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        btnHola.setText("HOLA");
+        img_vista_TruckMaster_mis.setIcon(new javax.swing.ImageIcon(getClass().getResource("/truck_master_mis/VEHICULOS.png"))); // NOI18N
+        img_vista_TruckMaster_mis.setLabelFor(img_vista_TruckMaster_mis);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(154, 154, 154)
-                .addComponent(btnHola)
-                .addContainerGap(183, Short.MAX_VALUE))
+            .addComponent(img_vista_TruckMaster_mis, javax.swing.GroupLayout.PREFERRED_SIZE, 920, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(96, 96, 96)
-                .addComponent(btnHola)
-                .addContainerGap(179, Short.MAX_VALUE))
+                .addComponent(img_vista_TruckMaster_mis, javax.swing.GroupLayout.PREFERRED_SIZE, 720, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 3, Short.MAX_VALUE))
         );
+
+        img_vista_TruckMaster_mis.getAccessibleContext().setAccessibleName("");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -79,7 +78,7 @@ public class principal_Vista extends javax.swing.JFrame {
  
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnHola;
+    private javax.swing.JLabel img_vista_TruckMaster_mis;
     // End of variables declaration//GEN-END:variables
 
 }

@@ -17,5 +17,7 @@ public class main_Truck_Master_MIS {
         
         // Llama al método que inicia la ventana
         ventana.arrancarVentana();
-    }
+        
+        
+}
 }
