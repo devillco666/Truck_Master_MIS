@@ -16,15 +16,15 @@ import java.awt.event.WindowListener;
  *
  * @Ioan Sorin Muntean
  */
-public class principal_Vista extends javax.swing.JFrame {
+public class principal_Vista_Truck_master_MIS extends javax.swing.JFrame {
 
     /**
      * Constructor de la clase principal_Vista.
      * Crea un nuevo frame principal de la aplicación.
      */
-    public principal_Vista() {
+    public principal_Vista_Truck_master_MIS() {
         initComponents(); // Inicializa los componentes gráficos
-
+/*
         // Crea instancias de los manejadores de eventos
         manejaComponetes mComponentes = new manejaComponetes();
         manejadorDeVentana manejaVentanas = new manejadorDeVentana();
@@ -35,7 +35,7 @@ public class principal_Vista extends javax.swing.JFrame {
         
        // Crea un manejador para el botón y le asigna el ActionListener
      //   manejaClick mc = new manejaClick();
-       
+      */ 
     }
 
     /**
@@ -82,6 +82,7 @@ public class principal_Vista extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 
 }
+/*
 // Clase que maneja el evento de clic en el botón
 class manejaClick implements ActionListener {
     @Override
@@ -155,3 +156,4 @@ class manejadorDeVentana implements WindowListener {
         System.out.println("Ventana defocalizada"); // Mensaje cuando la ventana pierde el foco
     }
 }
+*/

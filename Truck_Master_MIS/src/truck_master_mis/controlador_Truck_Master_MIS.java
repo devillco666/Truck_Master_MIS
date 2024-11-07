@@ -17,7 +17,7 @@ public class controlador_Truck_Master_MIS {
      */
     public void arrancarVentana() {
         // Crea una instancia de la ventana principal de la aplicación
-        principal_Vista pv = new principal_Vista();
+        principal_Vista_Truck_master_MIS pv = new principal_Vista_Truck_master_MIS();
         
         // Hace visible la ventana principal
         pv.setVisible(true);
