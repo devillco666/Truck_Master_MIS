@@ -13,4 +13,12 @@ No hay label.
 -> Corrige las carencias y en el label inserta una imagen donde "pintes" el look de como sería la ventana principal.
 -> Refactoriza (cambia) los nombres de todas las clases y objetos que uses de forma que sean exclusivos tuyos y del proyecto (en el futuro no evaluaré nada con nombres genéricos automatizados).
 -> Modifica el README.md donde sea más explicativo sobre el objetivo del proyecto.
+
 -> Por ahora no es encesario controlar tantos eventos (y sería desde tu "Control").
+
+2º modificación:
+Elimina la imagen (en el sentido de ser usada guía del look), y debes tener 4 ventanas (una es el JDialog):
+1-> presentación, no redimensionable (tamaño mediano), simulando la carga, y desaparece por tiempo.
+2-> Salta un JFrame para hacer el login (un usuario administrador de base)
+3-> Depués salta a la principal, donde toda la botonera lateral es funcional en el sentido de mandar un mensaje por consola, y usar "Ajustes" done lanza un JDialog modificado. Los cambios del look y la lista de vehículos de la flota, debe poder cargar los datos en el arranque.
+Todo los métodos y clases documentados.
